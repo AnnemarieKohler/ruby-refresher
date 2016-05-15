@@ -13,13 +13,14 @@ end
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
-  array.select do |element|
-    !element.nil?
-  end
+  array.select { |element| !element.nil? }
 end
 
 # remove instances of nil AND false from an array
 def remove_nils_and_false_from_array(array)
+  array.select do |variable|
+    !variable.nil? && variable != false
+  end
 end
 
 # don't reverse the array, but reverse every word inside it. e.g.
