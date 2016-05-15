@@ -7,12 +7,15 @@ end
 def select_elements_starting_with_vowel(array)
   vowels = ['a', 'e', 'i', 'o', 'u']
   array.select do |element|
-    vowels.any? { |vowel| vowel == element[0] }     
+    vowels.any? { |vowel| vowel == element[0] }
   end
 end
 
 # remove instances of nil (but NOT false) from an array
 def remove_nils_from_array(array)
+  array.select do |element|
+    element != nil
+  end
 end
 
 # remove instances of nil AND false from an array
